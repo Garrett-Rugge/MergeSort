@@ -17,7 +17,7 @@ bool sorted(int a[], int n) {//checks if array is sorted
 	else
     	return true;
 }
-void merge(int a[], int x[], int start, int mid, int end){
+void merge(int a[], int x[], int start, int mid, int end){ //merges arrays together in order
     int num1 = mid - start + 1; //lower part of the array start point
     int num2 =  end - mid; //Higher part of the array start point
  	int k, i, j;
@@ -62,7 +62,7 @@ void merge(int a[], int x[], int start, int mid, int end){
     }	
 }
 
-void msort(int a[], int x[], int start, int end){
+void msort(int a[], int x[], int start, int end){ //recursive function to seperate the array
 	if(start < end){
 	int mid = (start + end) / 2;
 	msort(a, x, start, mid);
@@ -78,7 +78,7 @@ void mergesort(int a[], int len){
 }
 
 
-int main()
+int main() //tests for the mergesort
 {
 	int a[1000];
 	for (int i = 0; i < 1000; ++i) a[i] = -50 + rand() % 100;
