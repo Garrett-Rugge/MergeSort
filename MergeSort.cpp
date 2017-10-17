@@ -32,7 +32,7 @@ void merge(int a[], int x[], int start, int mid, int end){ //merges arrays toget
     i = 0; 
     j = 0; 
     k = start;
-    while (i < num1 && j < num2)
+    while (i < num1 && j < num2) //sorts most if not all numbers
     {
         if (arr1[i] <= arr2[j])
         {
@@ -47,14 +47,14 @@ void merge(int a[], int x[], int start, int mid, int end){ //merges arrays toget
         k++;
     }
  
-    while (i < num1)
+    while (i < num1) //sorts any remaining in the lower array
     {
         a[k] = arr1[i];
         i++;
         k++;
     }
  
-    while (j < num2)
+    while (j < num2) //sorts any remaining in the upper array
     {
         a[k] = arr2[j];
         j++;
