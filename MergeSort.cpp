@@ -76,28 +76,15 @@ void mergesort(int a[], int len){
 	int x[len];
 	msort(a, x, 0, len-1);
 }
-
-
-int main() //tests for the mergesort
-{
+void test1(){ //tests mergesort with random numbers
 	int a[1000];
 	for (int i = 0; i < 1000; ++i) a[i] = -50 + rand() % 100;
 	mergesort(a, 1000);
 	assert(sorted(a, 1000));
-
-	int b[1001];
-	for (int i = 0; i < 1001; ++i) b[i] = -50 + rand() % 100;
-	mergesort(b, 1001);
-	assert(sorted(b, 1001));
-
-	int c[] = { 2 };
-	mergesort(c, 1);
-	assert(sorted(c, 1));
-
-	int d[] = { 1, 2, 3, 4, 5 };
-	mergesort(d, 5);
-	assert(sorted(d, 5));
-
+}
+int main() //tests for the mergesort
+{
+	test1();
 	cout << "All tests passed." << endl;	
 }
 
